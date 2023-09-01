@@ -1,0 +1,13 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+#- caption: "Parte 1: Sabendo onde estamos"
+#  chapters:
+#  - file: 01-Introducao-Ambiente.ipynb
+#  - file: 02-Introducao-Algoritmos.ipynb
+- caption: "Arquitetura"
+  chapters:
+  - file: Git.ipynb

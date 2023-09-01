@@ -1,0 +1,35 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: "Falando Código: Guia Prático de TI & IA para Analistas"
+author: "Wellington Rodrigo Monteiro"
+copyright: "2023, Wellington Rodrigo Monteiro"
+# logo: logo.png
+
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: force
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/wmonteiro-ai/it-guide-ptbr  # Online location of your book
+  path_to_book: docs  # Optional path to your book, relative to the repository root
+  branch: main  # Which branch of the repository should be used when creating links (optional)
+
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  use_issues_button: true
+  use_repository_button: true
+  google_analytics_id: G-RFWWZ9S2EZ
+
+sphinx:
+  config:
+    language: en
+    html_show_copyright: false
+    html_extra_path: ['assets']
+    html_last_updated_fmt: ""
+  extra_extensions:
+    - sphinx_inline_tabs
+# reference on building the book https://jupyterbook.org/en/stable/start/build.html
