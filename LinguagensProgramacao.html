@@ -1,0 +1,625 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Linguagens de Programação, ou a Escola de Idiomas do Pessoal de TI &#8212; Falando Código: Guia Prático de TI &amp; IA para Analistas</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/tabs.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-RFWWZ9S2EZ"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-RFWWZ9S2EZ');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'LinguagensProgramacao';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Juntando mais de duas pessoas para trabalhar na mesma coisa, e sem brigas: controle de versões" href="Git.html" />
+    <link rel="prev" title="Falando Código: Guia Prático de TI &amp; IA para Analistas" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Falando Código: Guia Prático de TI & IA para Analistas</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Falando Código: Guia Prático de TI & IA para Analistas
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Arquitetura</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Linguagens de Programação, ou a Escola de Idiomas do Pessoal de TI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Git.html">Juntando mais de duas pessoas para trabalhar na mesma coisa, e sem brigas: controle de versões</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/wmonteiro-ai/it-guide-ptbr" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/wmonteiro-ai/it-guide-ptbr/issues/new?title=Issue%20on%20page%20%2FLinguagensProgramacao.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/LinguagensProgramacao.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Linguagens de Programação, ou a Escola de Idiomas do Pessoal de TI</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-que-voce-sabera-se-voce-ler-todo-este-capitulo">O que você saberá se você ler todo este capítulo?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torre-de-babel-doc">torre_de_babel.doc</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#falando-com-computadores">Falando com computadores</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linguagens-de-programacao">Linguagens de programação</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#escolhendo-uma-linguagem-de-programacao">Escolhendo uma linguagem de programação</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linguagens-mais-comuns">Linguagens mais comuns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nem-tudo-e-linguagem-de-programacao">Nem tudo é linguagem de programação</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aqui-e-baixo-nivel-ou-nao">Aqui é baixo nível (ou não)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formas-diferentes-de-programacao">Formas diferentes de programação</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias-bibliograficas">Referências bibliográficas</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="linguagens-de-programacao-ou-a-escola-de-idiomas-do-pessoal-de-ti">
+<h1>Linguagens de Programação, ou a Escola de Idiomas do Pessoal de TI<a class="headerlink" href="#linguagens-de-programacao-ou-a-escola-de-idiomas-do-pessoal-de-ti" title="Permalink to this heading">#</a></h1>
+<section id="o-que-voce-sabera-se-voce-ler-todo-este-capitulo">
+<h2>O que você saberá se você ler todo este capítulo?<a class="headerlink" href="#o-que-voce-sabera-se-voce-ler-todo-este-capitulo" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Vai entender o motivo de existem tantas linguagens de programação por aí.</p></li>
+<li><p>Vai entender quais linguagens são mais usadas e o porquê.</p></li>
+<li><p>Você também vai saber quais linguagens <em>realmente</em> são de programação (e quais não são).</p></li>
+</ol>
+</section>
+<section id="torre-de-babel-doc">
+<h2>torre_de_babel.doc<a class="headerlink" href="#torre-de-babel-doc" title="Permalink to this heading">#</a></h2>
+<p>Eu sei que você é um(a) profissional de alta categoria, e que você realmente possui um nível de performance e conhecimento invejáveis. É uma pessoa comprometida e que executa o seu trabalho com maestria. Contudo, isso não significa necessariamente que você seja uma pessoa poliglota. Pode ser que você consiga <em>se virar</em> ao precisar ler alguma coisa em inglês ou, quem sabe, é fluente em inglês, espanhol e mais um ou dois idiomas.</p>
+<p>Independente do seu nível de conhecimento em idiomas, uma coisa é certa: você sabe que diferentes lugares falam línguas diferentes por razões diferentes. Hoje em dia, a língua franca para o mundo dos negócios é o inglês. Algum tempo atrás, era o francês, ou o latim. Existem áreas em que não saber o alemão ou o italiano é um pecado, praticamente. Como você deve imaginar, saber falar só o finlandês em uma empresa que requerem o inglês não serve de muita coisa. Por outro lado, para quem sabe o alemão, aprender inglês é um processo relativamente mais simples. Afinal de contas, ambos os idiomas são parecidos.</p>
+<p>Isto é: não preciso discorrer muito para que você saiba que existem idiomas que são próximos uns dos outros (como português e espanhol, ou holandês e alemão), e outros que são bem distantes entre si (como o inglês e o japonês). Também você sabe que existem idiomas que são falados por mais gente, e outros que são falados por menos pessoas. Existem também idiomas que são falados por menos países (como o coreano), e idiomas que são falados por dezenas de países (como o espanhol). Existem também dialetos e sotaques.</p>
+<p>Agora, por que estou falando tudo isso? Para que você entenda que em TI não é diferente: a única coisa que muda é a de que, em vez de falarmos sobre linguagens de humanos, as mesmas regras se aplicam para linguagens de programação.</p>
+<figure>
+    <img alt="Torre de Babel" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29_-_Google_Art_Project_-_edited.jpg/1024px-Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29_-_Google_Art_Project_-_edited.jpg" style="max-width:400px; display: block; margin: auto;">
+    <figcaption style="text-align:center;">Torre de Babel, de Pieter Bruegel, o Velho (~1525-1569). <a href="https://en.wikipedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_(Vienna)_-_Google_Art_Project_-_edited.jpg">Fonte.</a></figcaption>
+</figure></section>
+<section id="falando-com-computadores">
+<h2>Falando com computadores<a class="headerlink" href="#falando-com-computadores" title="Permalink to this heading">#</a></h2>
+<p>Você já se perguntou como os programadores transformam ideias complexas em softwares e aplicativos funcionais que usamos todos os dias? Pode parecer magia, mas é uma combinação de lógica, criatividade e, claro, <strong>algoritmos</strong>!</p>
+<blockquote>
+<div><p><strong>Dica:</strong> é comum vermos notícias chamando Inteligência Artificial (IA) de algoritmos, mas nem todo algoritmo é de IA. Como uma analogia, algoritmos são como veículos. Nem todo veículo é um carro elétrico, mas o carro elétrico (que, neste caso, seria uma IA) certamente é um tipo de veículo.</p>
+</div></blockquote>
+<p>Para começar, programadores não se comunicam com computadores da mesma forma que conversamos com amigos. Seria muito legal se pudéssemos simplesmente dizer: “<em>Ei, computador, crie um aplicativo para mim sem erro nenhum, super seguro e que seja muito rápido!</em>” No entanto, a realidade é um pouco mais complexa. Computadores trabalham em termos de 0s e 1s: uma linguagem binária. É aqui que os algoritmos entram em cena. Um algoritmo é como se fosse uma receita detalhada que o programador escreve para guiar o computador passo a passo na realização de uma tarefa. Ele descreve cada etapa do processo, garantindo que o computador saiba exatamente o que fazer e como fazer.</p>
+<p>Agora, imagine tentar explicar a alguém como fazer um café perfeito sem omitir nenhum detalhe: quantidade de água, temperatura, tipo de grão, tempo de preparo, entre outros. Cada pequena especificação importa, e cada desvio ou erro também importa. No mundo da programação, isso é semelhante a criar um algoritmo. Se qualquer etapa for mal explicada ou omitida, o computador pode não fazer o que é esperado ou, pior, pode fazer algo totalmente inesperado!</p>
+<p>Já pensou o trabalhão que seria ter que explicar a alguém o que esta pessoa deve fazer para chegar ao café perfeito se acabasse a água, ou se não tivesse filtro de café, ou se a pessoa não tivesse um relógio para determinar o tempo de preparo, ou se no lugar de café ela tivesse leite? Pois é: é exatamente este tipo de coisa que o programador precisa pensar.</p>
+<p>Uma vez que o algoritmo está bem definido, o programador utiliza linguagens de programação (como Python, Java ou JavaScript) para traduzir esse algoritmo em código. Esse código é o que o computador realmente “entende” e executa. Então, em vez de conversar com o computador como faríamos com um colega, os programadores usam códigos para instruir o computador com precisão, eliminando ambiguidades.</p>
+<p>É por este motivo que eu diria que o processo de desenvolvimento de software é, às vezes, um trabalho de arte e de criação e, em outras vezes, um trabalho de técnica e de precisão. É um equilíbrio entre mente humana e máquina. Enquanto seria conveniente se pudéssemos simplesmente pedir aos computadores para fazerem coisas por nós, a beleza da programação está na construção meticulosa de algoritmos e na tradução desses algoritmos em um código que a máquina possa interpretar.</p>
+</section>
+<section id="linguagens-de-programacao">
+<h2>Linguagens de programação<a class="headerlink" href="#linguagens-de-programacao" title="Permalink to this heading">#</a></h2>
+<p>Agora, você já se perguntou por que existem tantas linguagens de programação por aí? Afinal, <strong>por que os desenvolvedores não usam simplesmente uma única linguagem universal para tudo</strong>?</p>
+<p>Como de costume, pensemos em analogias. Vamos supor que você trabalhe em uma empresa a qual te paga para viajar pelo mundo e implementar projetos de TI em diferentes escritórios e em diferentes países. Em cada país, as pessoas falam diferentes línguas. Em um lugar, o inglês pode ser mais útil; em outro, o mandarim ou o espanhol. Cada língua evoluiu de acordo com a cultura, história e necessidades específicas daquela região.</p>
+<p>Bom, de modo similar, no mundo da tecnologia as diferentes linguagens de programação surgiram para atender a necessidades específicas. Algumas são ótimas para desenvolver aplicações web rápidas, enquanto outras são ideais para tarefas complexas, como análise de dados ou desenvolvimento de jogos.</p>
+<p>Pensemos agora em outro exemplo: um chef preparando uma refeição gourmet. Ele escolhe cuidadosamente cada utensílio de cozinha para uma tarefa específica. Não usaria uma faca de pão para descascar batatas, certo? Da mesma forma, os desenvolvedores escolhem linguagens de programação que são mais adaptadas ao problema que estão tentando resolver. <strong>Python</strong>, por exemplo, é conhecido por sua simplicidade e é amplamente utilizado pelo pessoal que trabalha com Ciência de Dados. Já o <strong>JavaScript</strong> é a estrela do desenvolvimento web. O <strong>ABAP</strong> é usado por pessoas que trabalham com SAP, um sistema empresarial. Cada linguagem tem as suas próprias ferramentas e bibliotecas, o que ajuda na escolha para desenvoler certos projetos de TI.</p>
+<p>E aqui está outra coisa: a evolução. Assim como o mundo dos negócios evolui constantemente, o mesmo acontece com a tecnologia. Novas linguagens são criadas para lidar com novos desafios ou para melhorar as limitações das linguagens mais antigas. É uma adaptação constante às crescentes demandas do mundo digital.</p>
+<p>Por isso, cada linguagem de programação possui o seu lugar, a sua história e sua razão de ser. Você que é um analista de negócio pode tirar vantagem dessas informações também. Ao entender essa diversidade, você pode colaborar melhor com as equipes de TI e entender as decisões técnicas por trás dos produtos e soluções que a empresa desenvolve e entrega.</p>
+<section id="escolhendo-uma-linguagem-de-programacao">
+<h3>Escolhendo uma linguagem de programação<a class="headerlink" href="#escolhendo-uma-linguagem-de-programacao" title="Permalink to this heading">#</a></h3>
+<p>Agora, como uma linguagem de programação é escolhida para ser usada em uma empresa? Afinal, esta é uma decisão importante: projetos de TI podem levar meses ou anos a serem desenvolvidos, e um tempo maior ainda para serem mantidos. Muitas vezes, essa decisão é baseada em critérios técnicos bem embasados. Por exemplo, se uma empresa deseja desenvolver um aplicativo de celular, ela pode optar pelo <strong>Swift</strong> para iOS ou <strong>Kotlin</strong> para Android, considerando os benefícios técnicos que cada linguagem oferece para cada uma dessas plataformas. Outras considerações técnicas incluem a velocidade de execução do código, a maturidade das bibliotecas disponíveis e a adaptabilidade da linguagem às necessidades do projeto.</p>
+<p>No entanto, nem sempre as decisões são puramente técnicas. O mercado de trabalho também influencia. Se uma região tem uma abundante oferta de desenvolvedores especializados em Java, por exemplo, pode ser mais econômico e prático para uma empresa adotar <strong>Java</strong> para seus projetos. Afinal, contratar e treinar talentos é um investimento significativo.</p>
+<p>Só que nem sempre a vida é um mar de rosas, né? Às vezes, a escolha da linguagem pode ser influenciada pelas preferências pessoais de um gerente ou líder técnico. Talvez esta pessoa tenha uma “linguagem de estimação” com a qual esteja mais familiarizada ou pela qual tenha uma afinidade particular. Essa abordagem pode ser arriscada. Adotar uma linguagem baseada apenas nas preferências individuais pode levar a escolhas que não são ideais para as necessidades reais do projeto ou da equipe, e é um risco real em empresas que não são inerentemente de Tecnologia.</p>
+<p>Portanto, observe aqui que a escolha de uma linguagem de programação é uma combinação de fatores técnicos, práticos e, às vezes, pessoais. Para que as empresas prosperem, é fundamental que essa decisão seja bem ponderada, considerando tanto as necessidades atuais quanto as futuras do projeto, bem como o impacto dessa escolha no longo prazo (no caso, de alguns anos a até décadas).</p>
+<figure>
+    <img alt="TIOBE Index" src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Tiobeindex.png" style="max-width:600px; display: block; margin: auto;">
+    <figcaption style="text-align:center;">TIOBE Index, um dos índices de popularidade de linguagens de programação. Créditos: <a href="https://commons.wikimedia.org/wiki/File:Tiobeindex.png">TIOBE.</a></figcaption>
+</figure></section>
+<section id="linguagens-mais-comuns">
+<h3>Linguagens mais comuns<a class="headerlink" href="#linguagens-mais-comuns" title="Permalink to this heading">#</a></h3>
+<p>Agora, quais são as linguagens de programação mais comuns? Existem vários rankings de uso de linguagens como, por exemplo, o <a class="reference external" href="https://tiobe.com/tiobe-index/">TIOBE Index</a>. Aqui, listei algumas das mais populares em ordem alfabética. Vejamos:</p>
+<ul class="simple">
+<li><p><strong>ABAP</strong>: é usado frequentemente para desenvolver novas funcionalidades no SAP, um dos maiores sistemas empresariais do mundo. Se você já passou por alguma multinacional é extremamente provável que tenha pelo menos ouvido falar sobre o SAP.</p></li>
+<li><p><strong>C</strong>: é usado para o desenvolvimento de sistemas, aplicações embutidas, sistemas operacionais e software de baixo nível (já explico mais sobre isso).</p></li>
+<li><p><strong>C++</strong>: esta linguagem é usada para o desenvolvimento de sistemas, aplicações de alto desempenho, jogos e software em tempo real.</p></li>
+<li><p><strong>C#</strong>: ela é usada para aplicações empresariais e para o desenvolvimento de jogos.</p></li>
+<li><p><strong>Clojure</strong>: é usada em empresas que usam uma abordagem mais funcional (já falarei mais sobre isso) para o processamento de dados e desenvolvimento web.</p></li>
+<li><p><strong>Go</strong>: ela foi criada pela Google, e é usada em aplicações back-end (lógica de soluções como sites, aplicativos e outros serviços de empresas de tecnologia), e em  ferramentas de infraestrutura.</p></li>
+<li><p><strong>Java</strong>: ela é muito usada em aplicações empresariais, sistemas Android, sistemas de grande escala e aplicações web. É bem comum os estudantes de cursos de Graduação de TI aprenderem Java nas universidades.</p></li>
+<li><p><strong>JavaScript</strong>: é usado para o desenvolvimento web (interfaces de sites). Ela também é usada por frameworks como React e Angular, e aplicações server-side com Node.js. Ah, sei que é confuso, mas Java não tem nada a ver com JavaScript, beleza?</p></li>
+<li><p><strong>Kotlin</strong>: é usado para desenvolver aplicativos para Android e, cada vez mais, desenvolvimento web e backend.</p></li>
+<li><p><strong>PHP</strong>: boa parte dos sites usam PHP. Ele também é usado para sistemas de gerenciamento de conteúdo como WordPress e aplicações empresariais. Sempre se fala que o PHP está decaindo e que morrerá em breve, mas continua forte apesar disso.</p></li>
+<li><p><strong>Python</strong>: ele é usado para o desenvolvimento web (com soluções como o Django, Flask), ciência de dados, inteligência artificial e automação, por exemplo. É uma linguagem mais simples de se entender e, por isso, é frequentemente usada nas disciplinas de introdução à programação para estudantes de cursos de Graduação de TI nas universidades.</p></li>
+<li><p><strong>R</strong>: é usado para a análise estatística, ciência de dados e visualização. Muitos cientistas de dados que não vieram de TI começaram nesta linguagem e depois foram para o Python (ou continuam no R).</p></li>
+<li><p><strong>Ruby</strong>: é usado para o desenvolvimento web (com Ruby on Rails), scripting e automação.</p></li>
+<li><p><strong>Rust</strong>: é usado no desenvolvimento de sistemas, aplicações de alto desempenho e software seguro.</p></li>
+<li><p><strong>Scala</strong>: é usado para o processamento de big data (grandes conjuntos de dados com muito volume e variabilidade), sistemas paralelos e por empresas em geral que lidam com muitos dados sendo processados ao mesmo tempo por vários computadores.</p></li>
+<li><p><strong>Swift</strong>: é usado para desenvolver aplicativos para iOS e macOS.</p></li>
+</ul>
+</section>
+<section id="nem-tudo-e-linguagem-de-programacao">
+<h3>Nem tudo é linguagem de programação<a class="headerlink" href="#nem-tudo-e-linguagem-de-programacao" title="Permalink to this heading">#</a></h3>
+<blockquote>
+<div><p>“<em>E o HTML? E o SQL?</em>”</p>
+</div></blockquote>
+<p>Você sabia que existem várias linguagens ou tecnologias que, às vezes, são erroneamente classificadas como linguagens de programação mas que, na realidade, não o são? Podemos ter outras ferramentas vitais em muitos fluxos de trabalho de desenvolvimento de software, e, embora não sejam linguagens de programação no sentido tradicional, elas ainda exigem um nível de proficiência e compreensão para serem usadas de um jeito eficaz. Veja só:</p>
+<ul class="simple">
+<li><p><strong>CSS (Cascading Style Sheets)</strong>: ela é uma linguagem de estilo, e não de programação. Geralmente usamos o CSS para estilizar e definir a aparência de documentos HTML, como cores, tamanhos e fontes de texto.</p></li>
+<li><p><strong>HTML (HyperText Markup Language)</strong>: veja que no próprio nome diz que é uma linguagem de markup (marcação), e não de programação. É a linguagem que define a estrutura e apresentação do conteúdo de páginas web.</p></li>
+<li><p><strong>SQL (Structured Query Language)</strong>: é geralmente classificada como uma linguagem de consulta (query) de dados. Ainda que seja a base de muitos dos projetos de TI para que possamos consultar e processar bancos de dados, ela não é uma linguagem de programação em si.</p></li>
+<li><p><strong>XML (eXtensible Markup Language)</strong>: assim como o HTML, é também uma linguagem de marcação. Ele é usado para codificar documentos que sejam legíveis tanto para humanos quanto para máquinas. Se você entende uma planilha de Excel, não necessariamente um computador entenderá. O XML é um equilíbrio neste sentido.</p></li>
+<li><p><strong>JSON (JavaScript Object Notation)</strong>: ele é só uma forma de trocarmos dados entre sistemas. Embora seja derivado do JavaScript, por si só não é uma linguagem de programação.</p></li>
+</ul>
+</section>
+<section id="aqui-e-baixo-nivel-ou-nao">
+<h3>Aqui é baixo nível (ou não)<a class="headerlink" href="#aqui-e-baixo-nivel-ou-nao" title="Permalink to this heading">#</a></h3>
+<p>O conceito de “nível” em linguagens de programação se refere à proximidade da linguagem em relação à máquina (hardware) ou ao ser humano. Ou seja: indica quão abstrata ou concreta uma linguagem é em relação à operação direta do computador.</p>
+<p>Linguagens como Assembly são de <strong>baixo nível</strong>. Isto é, são mais próximas do hardware. Elas fornecem pouca ou nenhuma abstração das instruções do computador e, frequentemente, estão diretamente relacionadas com a arquitetura específica do sistema. Cada comando geralmente corresponde a uma instrução do processador, e pessoas que não entendam dessas linguagens dificilmente entenderão o que aquele código quer dizer.</p>
+<p>Por outro lado, temos também linguagens como Python, Java, C#, JavaScript, Scala e Ruby, que são linguagens de <strong>alto nível</strong>. Estão mais próximas dos humanos e mais distantes do hardware. Elas são projetadas para serem mais fáceis de serem lidas e escritas por humanos, oferecendo abstrações que escondem os detalhes complicados do funcionamento interno do computador.</p>
+<p>É claro que existe um equilíbrio entre esses níveis, também. Enquanto linguagens de baixo nível oferecem mais controle sobre o hardware e podem ser mais rápidas em certas operações, linguagens de alto nível oferecem uma curva de aprendizado mais suave e são geralmente mais produtivas para o desenvolvimento de aplicações comuns. Se você é um analista de negócio e está atuando perto de algum projeto de TI, então é provável que esteja atuando com uma linguagem de alto nível.</p>
+</section>
+</section>
+<section id="formas-diferentes-de-programacao">
+<h2>Formas diferentes de programação<a class="headerlink" href="#formas-diferentes-de-programacao" title="Permalink to this heading">#</a></h2>
+<p>Dei algumas analogias de linguagens de programação com idiomas, como o inglês, espanhol, alemão, coreano, entre outros. Em nenhum momento eu falei sobre a <em>escrita</em>. Isto é: inglês, português, espanhol e demais idiomas compartilham de um alfabeto parecido. Já o grego possui um outro tipo de alfabeto. O russo possui um outro alfabeto. O japonês também.</p>
+<p>Em programação, estas formas de escrita se comparam aos <strong>paradigmas</strong> de programação. A programação é uma disciplina vasta e diversificada, e diferentes paradigmas de programação surgiram ao longo dos anos para abordar distintas maneiras de pensar sobre problemas e soluções. Estes paradigmas moldam a maneira como o código é estruturado e como os problemas são decompostos e resolvidos.</p>
+<p>O primeiro tipo de paradigma que é frequentemente ensinado nas universidades é a <strong>programação procedural</strong>, ou estruturada. Se tivesse uma analogia para ela, seria a de uma receita de bolo. Ela foca na execução de sequências de comandos ou procedimentos. Neste paradigma, as operações são geralmente executadas em uma sequência linear, passo-a-passo (como a receita de bolo que acabei de comentar). O estado do programa é mantido através de variáveis, e os procedimentos ou funções são usados para modularizar o código e realizar tarefas específicas. Linguagens de programação que usam este tipo de paradigma são C, Python e R.</p>
+<p>Agora, outro tipo mais complexo e que é muuuuuuito usado nas empresas é a <strong>programação orientada a objetos</strong>. Aqui, tentamos simular o mundo como ele é, com diferentes coisas (ou objetos), e cada coisa com as suas características. Ou seja: ela é baseada no conceito de “objetos”, que são instâncias de “classes”. As classes definem atributos (campos) e comportamentos (métodos) que os seus objetos terão. Linguagens como ABAP, Java, C++ e C# usam este paradigma. Também é possível termos projetos em Python usando isso, mas é um pouco menos comum.</p>
+<p>Por último, temos a <strong>programação funcional</strong>. Ela tem como foco principal as funções, e é mais difícil de se ver nas empresas. Em vez de dizer ao computador passo-a-passo o que fazer (como fazer um bolo seguindo uma receita), aqui definimos várias funções e descreve como elas se relacionam e trabalham juntas. Uma característica marcante é que, na programação funcional, os dados são tratados como imutáveis. Ou seja, uma vez que um valor é definido, ele não pode ser alterado. Para ficar mais claro, imagine uma linha de produção de uma fábrica. Em vez de termos uma máquina gigante em que entra a matéria-prima e sai o produto pronto e embalado, temos várias pequenas máquinas especializadas. Uma funciona como uma balança. Outra, como empacotadora. Outra, como uma máquina de corte, e assim por diante. O legal disso é que essas máquinas podem ser usadas em diferentes combinações para produzir diferentes tipos de produtos. A programação funcional é semelhante: criamos várias funções pequenas e especializadas (que seriam as máquinas da fábrica) e, em seguida, combina-as de diferentes maneiras para obter o resultado desejado. E assim como cada máquina não altera a matéria-prima original, mas produz algo novo, as funções na programação funcional não alteram os dados originais, mas produzem novos dados a partir deles. Linguagens como Haskell, Lisp, Scala e Clojure são fortemente influenciadas por este paradigma.</p>
+</section>
+<section id="referencias-bibliograficas">
+<h2>Referências bibliográficas<a class="headerlink" href="#referencias-bibliograficas" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>ABELSON, Harold; SUSSMAN, Gerald Jay; SUSSMAN, Julie. <strong>Structure and Interpretation of Computer Programs: JavaScript Edition</strong>. Estados Unidos: MIT Press, 2022.</p></li>
+<li><p>CRAIG, Iain. <strong>The Interpretation of Object-Oriented Programming Languages</strong>. United Kingdom: Springer London, 2012.</p></li>
+<li><p>JONES, Cliff B. <strong>Understanding Programming Languages</strong>. Germany: Springer International Publishing, 2020.</p></li>
+<li><p>MITCHELL, John C. <strong>Concepts in Programming Languages</strong>. United States: Cambridge University Press, 2002.</p></li>
+<li><p>TEUFEL, Bernd. <strong>Organization of Programming Languages</strong>. Austria: Springer Vienna, 2012.</p></li>
+<li><p>WIDMAN, Jack. <strong>Learning Functional Programming</strong>. N.p.: O’Reilly Media, 2022.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Falando Código: Guia Prático de TI &amp; IA para Analistas</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Git.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Juntando mais de duas pessoas para trabalhar na mesma coisa, e sem brigas: controle de versões</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-que-voce-sabera-se-voce-ler-todo-este-capitulo">O que você saberá se você ler todo este capítulo?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torre-de-babel-doc">torre_de_babel.doc</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#falando-com-computadores">Falando com computadores</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linguagens-de-programacao">Linguagens de programação</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#escolhendo-uma-linguagem-de-programacao">Escolhendo uma linguagem de programação</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linguagens-mais-comuns">Linguagens mais comuns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nem-tudo-e-linguagem-de-programacao">Nem tudo é linguagem de programação</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aqui-e-baixo-nivel-ou-nao">Aqui é baixo nível (ou não)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formas-diferentes-de-programacao">Formas diferentes de programação</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias-bibliograficas">Referências bibliográficas</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Wellington Rodrigo Monteiro
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Last updated on Sep 02, 2023.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
