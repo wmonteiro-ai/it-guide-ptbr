@@ -10,4 +10,5 @@ parts:
 #  - file: 02-Introducao-Algoritmos.ipynb
 - caption: "Arquitetura"
   chapters:
+  - file: LinguagensProgramacao.ipynb
   - file: Git.ipynb
